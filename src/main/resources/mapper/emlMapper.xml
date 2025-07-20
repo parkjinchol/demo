@@ -17,6 +17,9 @@
         ORDER BY r.id
     </select>
 
+    <select id="selectTest1" resultType="long">
+        SELECT id FROM email_master ORDER BY id
+    </select>
 
 
 </mapper>

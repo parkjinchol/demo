@@ -11,4 +11,8 @@ public interface EmlMapper {
     List<Long> selectAllMasterIds();
 
     List<EmailRecipient> selectRecipientsByMasterId(@Param("masterId") Long masterId);
+
+    List<Long> selectTest1();
+
+
 }
