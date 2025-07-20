@@ -20,6 +20,9 @@
     <select id="selectTest1" resultType="long">
         SELECT id FROM email_master ORDER BY id
     </select>
-
+  
+    <select id="selectTest2" resultType="long">
+        SELECT id FROM email_master ORDER BY id
+    </select>
 
 </mapper>
