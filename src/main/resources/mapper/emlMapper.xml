@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.demo.mapper.EmlMapper">
+
+    <select id="selectAllMasterIds" resultType="long">
+        SELECT id FROM email_master ORDER BY id
+    </select>
+
+    <select id="selectRecipientsByMasterId" parameterType="long" resultType="com.demo.dto.EmailRecipient">
+        SELECT r.id, r.email_master_id AS emailMasterId, r.email, m.subject, m.content
+        FROM email_recipient r
+                 JOIN email_master m ON r.email_master_id = m.id
+        WHERE r.email_master_id = #{masterId}
+        ORDER BY r.id
+    </select>
+
+
+
+</mapper>
