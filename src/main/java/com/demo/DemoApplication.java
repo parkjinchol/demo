@@ -30,4 +30,9 @@ public class DemoApplication {
 
         context.close();
     }
+
+    public void test1() {
+
+    }
+
 }
